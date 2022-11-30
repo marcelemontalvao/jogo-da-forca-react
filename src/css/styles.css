@@ -15,8 +15,8 @@
 }
 
 .container img {
-    width: 60%;
-    height: 80%;
+    width: 45%;
+    height: 70%;
 }
 
 .container-btn-word {
@@ -47,9 +47,7 @@
 
 .container-lyrics {
     width: 60%;
-    margin: 0 auto;
     display: flex;
-    justify-content: space-between;
     gap: 18px;
     flex-wrap: wrap;
 }
@@ -66,12 +64,25 @@
     cursor: pointer;
 }
 
+.lyric:hover {
+    background-color: rgb(20, 20, 200);
+    color: #fafafa;
+}
+
+.lyric:disabled {
+    cursor: default;
+    background-color: #9faab5;
+    color: #79818a;
+    border: 1px solid #9faab5;
+}
+
 .container-shot {
     width: 60%;
     display: flex;
     align-items: center;
     justify-content: space-evenly;
     margin-top: 25px;
+    padding-bottom: 50px;
 }
 
 .container-shot input {
@@ -86,5 +97,6 @@
     border-radius: 4px;
     color:rgb(48, 48, 148);
     border: 1px solid rgb(48, 48, 148);
-
+    cursor: pointer;
 }
+
