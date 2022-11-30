@@ -100,3 +100,14 @@
     cursor: pointer;
 }
 
+.black {
+    color: #000000;
+}
+
+.red {
+    color: red;
+}
+
+.green {
+    color: green;
+}

@@ -8,13 +8,15 @@ import loseGame from "../../assets/forca6.png"
 import "../../css/styles.css"
 import palavras from "../../palavras"
 
-export default function Game({setDisabledInput, setDisabledLyric, amountErrorsGame, setAmountErrorsGame, setRandomWord, wordGame, setWordGame}) {
+export default function Game({setDisabledInput, setDisabledLyric, amountErrorsGame, setAmountErrorsGame, setRandomWord, wordGame, setWordGame, colorWord, setColorWord, setShot}) {
 
     const playGame = () => {
         setDisabledInput(false)
         setDisabledLyric([])
         setAmountErrorsGame(0)
         randomWord()
+        setColorWord("black")
+        setShot("")
     }
 
     const renderImg = (amountErrorsGame) => {
@@ -60,7 +62,7 @@ export default function Game({setDisabledInput, setDisabledLyric, amountErrorsGa
             <img src={renderImg(amountErrorsGame)} alt="Forca Inicial" />
             <div className="container-btn-word">
                 <button onClick={playGame}>Escolher palavra</button>
-                <span>{wordGame}</span>
+                <span className={colorWord}>{wordGame}</span>
             </div>
         </div>
     )
