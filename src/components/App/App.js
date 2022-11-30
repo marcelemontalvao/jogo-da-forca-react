@@ -17,7 +17,7 @@ function App() {
 
   return (
     <div className="App">
-      <Game setDisabledInput={setDisabledInput} setDisabledLyric={setDisabledLyric} amountErrorsGame={amountErrorsGame} setAmountErrorsGame={setAmountErrorsGame} setRandomWord={setRandomWord} wordGame={wordGame} setWordGame={setWordGame} colorWord={colorWord} setColorWord={setColorWord} setShot={setShot} />
+      <Game setDisabledInput={setDisabledInput} setDisabledLyric={setDisabledLyric} amountErrorsGame={amountErrorsGame} setAmountErrorsGame={setAmountErrorsGame} randomWord={randomWord} setRandomWord={setRandomWord} wordGame={wordGame} setWordGame={setWordGame} colorWord={colorWord} setColorWord={setColorWord} setShot={setShot} />
       <Lyrics disabledLyric={disabledLyric} setDisabledLyric={setDisabledLyric} randomWord={randomWord} setRandomWord={setRandomWord} wordGame={wordGame} setWordGame={setWordGame}  amountErrorsGame={amountErrorsGame} setAmountErrorsGame={setAmountErrorsGame} setColorWord={setColorWord} setDisabledInput={setDisabledInput} />
       <Shot disabledInput={disabledInput} setDisabledInput={setDisabledInput} setDisabledLyric={setDisabledLyric} shot={shot} setShot={setShot} wordGame={wordGame} setWordGame={setWordGame} setColorWord={setColorWord} randomWord={randomWord} setRandomWord={setRandomWord} setAmountErrorsGame={setAmountErrorsGame} />
     </div>

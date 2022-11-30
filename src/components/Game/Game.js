@@ -8,7 +8,7 @@ import loseGame from "../../assets/forca6.png"
 import "../../css/styles.css"
 import palavras from "../../palavras"
 
-export default function Game({setDisabledInput, setDisabledLyric, amountErrorsGame, setAmountErrorsGame, setRandomWord, wordGame, setWordGame, colorWord, setColorWord, setShot}) {
+export default function Game({setDisabledInput, setDisabledLyric, amountErrorsGame, setAmountErrorsGame, setRandomWord, wordGame, setWordGame, colorWord, setColorWord, setShot, randomWord}) {
 
     const playGame = () => {
         setDisabledInput(false)
@@ -59,10 +59,10 @@ export default function Game({setDisabledInput, setDisabledLyric, amountErrorsGa
 
     return (
         <div className="container">
-            <img src={renderImg(amountErrorsGame)} alt="Forca Inicial" />
+            <img data-test="game-image" src={renderImg(amountErrorsGame)} alt="Forca Inicial" />
             <div className="container-btn-word">
-                <button onClick={playGame}>Escolher palavra</button>
-                <span className={colorWord}>{wordGame}</span>
+                <button data-test="choose-word" onClick={playGame}>Escolher palavra</button>
+                <span data-test="word" data-answer={randomWord} className={colorWord}>{wordGame}</span>
             </div>
         </div>
     )

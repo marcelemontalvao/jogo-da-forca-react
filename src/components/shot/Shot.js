@@ -27,10 +27,10 @@ export default function Shot({disabledInput, setDisabledInput, setDisabledLyric,
     return (
         <div className="container-shot">
             <span>Já sei a palavra!</span>
-            <input placeholder="Digite seu chute aqui!" disabled={disabledInput} value={shot} onChange={event => {
+            <input data-test="guess-input" placeholder="Digite seu chute aqui!" disabled={disabledInput} value={shot} onChange={event => {
                 setShot(event.target.value)
             }}></input>
-            <button onClick={guessWord}>Chutar</button>
+            <button data-test="guess-button" onClick={guessWord}>Chutar</button>
         </div>
     )
 } 

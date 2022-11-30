@@ -24,7 +24,7 @@ export default function Lyrics({disabledLyric, setDisabledLyric, randomWord, set
         }
     }
 
-    const doNotHitLyric = (letterClicked) => {
+    const doNotHitLyric = () => {
         const newAmountErrors = amountErrorsGame + 1
         setAmountErrorsGame(newAmountErrors)
         if(newAmountErrors == 6) {
@@ -42,7 +42,7 @@ export default function Lyrics({disabledLyric, setDisabledLyric, randomWord, set
     return (
         <section className="container-lyrics">
             {alphabet.map(lyric => (
-                <button onClick={()=> clickLetter(lyric)} className="lyric" 
+                <button data-test="letter" onClick={()=> clickLetter(lyric)} className="lyric" 
                 disabled={disabledLyric.includes(lyric)}>
                     {lyric}
                     </button>
